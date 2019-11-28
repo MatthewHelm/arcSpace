@@ -1,0 +1,11 @@
+THIS IS VERY CRITICAL:
+I NEED TO SORT OUT ISSUSING_AUTHORITY and ISSUING_AUTHORITY_REIGN CLASSES, including the _DL, _BL, and support classes.  
+
+I needs to work like this:
+
+-->  means "has a pointer in"
+issuing_authority_name-->issuing_authority_reign-->issuing_authority
+
+Okay, this is what is going to happen:
+
+issuing_authority_reign contains issuing_authority

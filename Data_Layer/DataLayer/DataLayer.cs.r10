@@ -1,0 +1,117 @@
+﻿using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace arcSpace.Data_Layer
+{
+    public class DataLayer<T> where T: class
+    {
+
+       static private string ConnectionString = "Data Source=BCSWS7;Initial Catalog=\"Ancient Roman Coins\";Integrated Security=True";
+
+
+       public static bool InsertTypeRecord(string formattedInsertString)
+       {
+          bool insertSuccessful = false;
+
+          if (string.IsNullOrEmpty(formattedInsertString))
+          {
+             return insertSuccessful;
+          }
+
+          SqlConnection conn = new SqlConnection(ConnectionString);
+          SqlCommand comm = new SqlCommand(formattedInsertString, conn);
+
+          try
+          {
+             conn.Open();
+             comm.ExecuteNonQuery();
+             insertSuccessful = true;
+          }
+          catch
+          {
+             insertSuccessful = false;
+          }
+          finally
+          {
+             conn.Close();
+             conn.Dispose();
+             comm.Dispose();
+          }
+
+          return insertSuccessful;
+       }
+
+
+       public static bool UpdateTypeRecord(string formattedUpdateString)
+       {
+          bool updateSuccessful = false;
+
+          if (string.IsNullOrEmpty(formattedUpdateString))
+          {
+             return updateSuccessful;
+          }
+
+          SqlConnection conn = new SqlConnection(ConnectionString);
+          SqlCommand comm = new SqlCommand(formattedUpdateString, conn);
+
+          try
+          {
+             conn.Open();
+             comm.ExecuteNonQuery();
+             updateSuccessful = true;
+          }
+          catch
+          {
+             updateSuccessful = false;
+          }
+          finally
+          {
+             conn.Close();
+             conn.Dispose();
+             comm.Dispose();
+          }
+
+          return updateSuccessful;
+       }
+
+
+       public static bool DeleteTypeRecord(string formattedDeleteString)
+       {
+          bool deleteSuccessful = false;
+
+          if (string.IsNullOrEmpty(formattedDeleteString))
+          {
+             return deleteSuccessful;
+          }
+
+          SqlConnection conn = new SqlConnection(ConnectionString);
+          SqlCommand comm = new SqlCommand(formattedDeleteString, conn);
+
+          try
+          {
+             conn.Open();
+             comm.ExecuteNonQuery();
+             deleteSuccessful = true;
+          }
+          catch
+          {
+             deleteSuccessful = false;
+          }
+          finally
+          {
+             conn.Close();
+             conn.Dispose();
+             comm.Dispose();
+          }
+
+
+         return deleteSuccessful;
+       }
+
+    }
+}

@@ -1,0 +1,20 @@
+
+create GetIssuingAuthorityNameByIssuingAuthorityReignId based on GetIssuingAuthorityNameByIssuingAuthorityId
+Rename it, too.
+
+
+develop GetIssuingAuthorityNameViaIssuingAuthorityReignId
+for IssuingAuthorityName_DL
+
+fix 
+item = IssuingAuthorityReign_BL.GetIssuingAuthorityNameGivenIssuingAuthorityReignId(objIssuingAuthorityReign);
+
+
+
+NAMING CONVENTIONS based on IssuingAuthority
+
+public static string GetIssuingAuthorityNameByIssuingAuthorityId(IssuingAuthority objIssuingAuthority)
+public static string GetIssuingAuthorityNameByIssuingAuthorityId(int intIssuingAuthorityId)
+
+public static IssuingAuthorityName GetIssuingAuthorityNameObjectByIssuingAuthorityId(IssuingAuthority objIssuingAuthority)
+public static IssuingAuthorityName GetIssuingAuthorityNameObjectByIssuingAuthorityId(int intIssuingAuthorityId)

@@ -1,0 +1,50 @@
+/*
+
+This is a bunch of notes discussing the modification in the design and implementation of arcSpace.
+
+
+A.  Issuing Authority, IssuingAuthorityName, IssuingAuthorityTitle, and IssuingAuthorityReign
+
+Prior to this change, IssuingAuthority was a set of loose classes.  Now, I am creating better relationship among the classes.
+
+
+11/28/2018  PUT ABOVE ON HOLD
+
+Now creating labels.  Using the following: Coin (and respective BL and DL classes) and CoinDisplaySet (and respective BL and DL classes).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*I/

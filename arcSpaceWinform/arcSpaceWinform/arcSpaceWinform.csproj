@@ -1,0 +1,468 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9C06BA28-A064-4670-87D5-5A06D16E16DA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>arcSpaceWinform</RootNamespace>
+    <AssemblyName>arcSpaceWinform</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LogicalTreeControl">
+      <HintPath>..\..\User_Controls\LogicalTreeControl\bin\Debug\LogicalTreeControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddCoin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddCoin.Designer.cs">
+      <DependentUpon>frmAddCoin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmArcPeriod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmArcPeriod.Designer.cs">
+      <DependentUpon>frmArcPeriod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHistoricalPerspective.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHistoricalPerspective.Designer.cs">
+      <DependentUpon>frmHistoricalPerspective.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmIssuingAuthorityReign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIssuingAuthorityReign.Designer.cs">
+      <DependentUpon>frmIssuingAuthorityReign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCoinTypeMaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCoinTypeMaintenance.Designer.cs">
+      <DependentUpon>frmCoinTypeMaintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDealer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDealer.Designer.cs">
+      <DependentUpon>frmDealer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGrade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGrade.Designer.cs">
+      <DependentUpon>frmGrade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmIssuingAuthorityName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIssuingAuthorityName.Designer.cs">
+      <DependentUpon>frmIssuingAuthorityName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMaterial.Designer.cs">
+      <DependentUpon>frmMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMint.Designer.cs">
+      <DependentUpon>frmMint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmModifyCoin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModifyCoin.Designer.cs">
+      <DependentUpon>frmModifyCoin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrintingLabels.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrintingLabels.Designer.cs">
+      <DependentUpon>frmPrintingLabels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReports.Designer.cs">
+      <DependentUpon>frmReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRicSection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRicSection.Designer.cs">
+      <DependentUpon>frmRicSection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRicVolume.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRicVolume.Designer.cs">
+      <DependentUpon>frmRicVolume.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTitle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTitle.Designer.cs">
+      <DependentUpon>frmTitle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTrvCoinSneakPeak.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTrvCoinSneakPeak.Designer.cs">
+      <DependentUpon>frmTrvCoinSneakPeak.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\arcIcons.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>arcIcons.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddCoin.resx">
+      <DependentUpon>frmAddCoin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmArcPeriod.resx">
+      <DependentUpon>frmArcPeriod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHistoricalPerspective.resx">
+      <DependentUpon>frmHistoricalPerspective.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIssuingAuthorityReign.resx">
+      <DependentUpon>frmIssuingAuthorityReign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCoinTypeMaintenance.resx">
+      <DependentUpon>frmCoinTypeMaintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDealer.resx">
+      <DependentUpon>frmDealer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGrade.resx">
+      <DependentUpon>frmGrade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIssuingAuthorityName.resx">
+      <DependentUpon>frmIssuingAuthorityName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMaterial.resx">
+      <DependentUpon>frmMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMint.resx">
+      <DependentUpon>frmMint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModifyCoin.resx">
+      <DependentUpon>frmModifyCoin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrintingLabels.resx">
+      <DependentUpon>frmPrintingLabels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReports.resx">
+      <DependentUpon>frmReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRicSection.resx">
+      <DependentUpon>frmRicSection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRicVolume.resx">
+      <DependentUpon>frmRicVolume.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTitle.resx">
+      <DependentUpon>frmTitle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTrvCoinSneakPeak.resx">
+      <DependentUpon>frmTrvCoinSneakPeak.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\arcIcons.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>arcIcons.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\arcSpace.Support_Classes.Coin.datasource" />
+    <None Include="Properties\DataSources\arcSpace.Support_Classes.CoinDisplaySet.datasource" />
+    <None Include="Properties\DataSources\arcSpace.Support_Classes.CoinLabelSet.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Application_Layer\LabelBuilder\LabelBuilder.csproj">
+      <Project>{67b9cd87-7730-4229-9fe7-cd758ee608ce}</Project>
+      <Name>LabelBuilder</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Business_Layer\ArcNode_BL\ArcNode_BL.csproj">
+      <Project>{a675c768-7869-4c3a-abb1-571f5691f1f3}</Project>
+      <Name>ArcNode_BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Business_Layer\Authority_BL\IssuingAuthority_BL.csproj">
+      <Project>{545b9f69-ce12-43ab-b631-a209e28dc2b8}</Project>
+      <Name>IssuingAuthority_BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Business_Layer\BL_Coin_Type\Coin_Type_BL.csproj">
+      <Project>{b2920262-3251-49e5-bdb4-292ab8a06d29}</Project>
+      <Name>Coin_Type_BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Business_Layer\BusinessLayer\BusinessLayer.csproj">
+      <Project>{dd857201-f7e3-4ad5-8963-3a71b6560ace}</Project>
+      <Name>BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Business_Layer\CoinDisplaySet_BL\CoinDisplaySet_BL.csproj">
+      <Project>{e535e592-bb78-424a-8c2d-17fbc0ac1b50}</Project>
+      <Name>CoinDisplaySet_BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Business_Layer\Coin_BL\Coin_BL.csproj">
+      <Project>{c6036a34-f548-42fe-af26-9de7c36c9513}</Project>
+      <Name>Coin_BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Business_Layer\Dealer_BL\Dealer_BL.csproj">
+      <Project>{aeb01ffc-9989-4e22-aef6-0c8b6571c450}</Project>
+      <Name>Dealer_BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Business_Layer\Era_BL\Era_BL.csproj">
+      <Project>{3bb32255-20c5-4de2-906f-e87992307e3e}</Project>
+      <Name>Era_BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Business_Layer\Grade_BL\Grade_BL.csproj">
+      <Project>{d9e9839c-9bcb-448f-bf80-b4544a5aea5c}</Project>
+      <Name>Grade_BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Business_Layer\IssuingAuthorityName_BL\IssuingAuthorityName_BL.csproj">
+      <Project>{8deb8eb8-aa5e-427e-b002-ef5c3b666c01}</Project>
+      <Name>IssuingAuthorityName_BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Business_Layer\IssuingAuthorityReign_BL\IssuingAuthorityReign_BL.csproj">
+      <Project>{083771e2-97b0-4d8c-b153-aa7c0f9be4c3}</Project>
+      <Name>IssuingAuthorityReign_BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Business_Layer\Material_BL\Material_BL.csproj">
+      <Project>{6a94d241-456d-41a0-91c5-9d9919624798}</Project>
+      <Name>Material_BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Business_Layer\Mint_BL\Mint_BL.csproj">
+      <Project>{d8d1fe11-45f5-4a3c-a925-402fc02aa205}</Project>
+      <Name>Mint_BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Business_Layer\Period_BL\Period_BL.csproj">
+      <Project>{48a2d513-0324-4db5-a129-a0c61512acb4}</Project>
+      <Name>Period_BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Business_Layer\RIC_BL\RIC_BL.csproj">
+      <Project>{a9b8e304-0398-4b48-9750-182b6ad661bd}</Project>
+      <Name>RIC_BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Business_Layer\Title_BL\IssuingAuthorityTitle_BL.csproj">
+      <Project>{1881ffc0-8858-45d1-9fa1-f9a48d662f11}</Project>
+      <Name>IssuingAuthorityTitle_BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Business_Layer\XlLabel_BL\XlReportAndLabel_BL.csproj">
+      <Project>{f6e0e64a-8c7f-4d2c-a2f6-661c91657dbc}</Project>
+      <Name>XlReportAndLabel_BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Global_Layer\Globals\Globals.csproj">
+      <Project>{ddf88a51-caf6-4212-97e6-6f972e97922e}</Project>
+      <Name>Globals</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Presentation_Layer\arcTreeNode\arcTreeNode.csproj">
+      <Project>{4aaf2df5-d194-4975-b5a7-5a5385bddbb8}</Project>
+      <Name>arcTreeNode</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Support_Classes\arcTag\ArcNode.csproj">
+      <Project>{9d4b9f5a-7592-41df-add8-8c1f7d177c84}</Project>
+      <Name>ArcNode</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Support_Classes\Authority\IssuingAuthority.csproj">
+      <Project>{c222d963-d7b3-4d68-ad9e-cf54fdf6b772}</Project>
+      <Name>IssuingAuthority</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Support_Classes\CoinDisplaySet\CoinDisplaySet.csproj">
+      <Project>{8da7adf5-e6c3-4101-9df4-d604f7af28e9}</Project>
+      <Name>CoinDisplaySet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Support_Classes\CoinLabelSet\CoinLabelSet.csproj">
+      <Project>{790a657c-bd11-4b11-aefe-bc5ced37e721}</Project>
+      <Name>CoinLabelSet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Support_Classes\Coin\Coin.csproj">
+      <Project>{9b3af967-c8af-45f4-b4f2-f2865a98db06}</Project>
+      <Name>Coin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Support_Classes\Coin_Type\Coin_Type.csproj">
+      <Project>{6c6c5cc4-dbca-436f-9faf-56dcfa8af35e}</Project>
+      <Name>Coin_Type</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Support_Classes\Country\Country.csproj">
+      <Project>{b4489826-a9e8-4347-a41e-7267106c04a5}</Project>
+      <Name>Country</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Support_Classes\Dealer\Dealer.csproj">
+      <Project>{f1fc3342-c3f8-468c-8dde-46d050d1e36e}</Project>
+      <Name>Dealer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Support_Classes\Era\Era.csproj">
+      <Project>{b0a3bd2e-26ff-460a-a8ee-3ce9840b104b}</Project>
+      <Name>Era</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Support_Classes\Grade\Grade.csproj">
+      <Project>{8d04ef0e-14ea-45a1-87ba-86e6d4b12d4e}</Project>
+      <Name>Grade</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Support_Classes\IssuingAuthorityName\IssuingAuthorityName.csproj">
+      <Project>{07c9d0ed-8b34-4dbc-a2a0-d59642333cf1}</Project>
+      <Name>IssuingAuthorityName</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Support_Classes\IssuingAuthorityReign\IssuingAuthorityReign.csproj">
+      <Project>{fdb0a9c9-3fc5-47c0-8989-5550eabbe973}</Project>
+      <Name>IssuingAuthorityReign</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Support_Classes\Material\Material.csproj">
+      <Project>{cf42531d-836a-4e0a-955a-99cd6f389515}</Project>
+      <Name>Material</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Support_Classes\Mint\Mint.csproj">
+      <Project>{eec8829d-fd51-444f-8ada-448dc5c7c111}</Project>
+      <Name>Mint</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Support_Classes\Period\Period.csproj">
+      <Project>{1fc68903-3343-4a19-89e5-a87cc264ccd6}</Project>
+      <Name>Period</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Support_Classes\RIC\RIC.csproj">
+      <Project>{f3d56025-048c-4284-b85d-2c9034c5f43f}</Project>
+      <Name>RIC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Support_Classes\Title\IssuingAuthorityTitle.csproj">
+      <Project>{d5a13fca-a072-49d1-aee7-af42227dafa6}</Project>
+      <Name>IssuingAuthorityTitle</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Support_Classes\XlLabel\XlReportAndLabel.csproj">
+      <Project>{7480fe92-26c0-4426-aa80-e23f4365b267}</Project>
+      <Name>XlReportAndLabel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\User_Controls\LogicalTreeView\LogicalTreeView.csproj">
+      <Project>{726f515a-1281-499a-9c36-700407c03853}</Project>
+      <Name>LogicalTreeView</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Constantinian Period ico size.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tetrarchy .25 original size.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\constantine dynasty.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

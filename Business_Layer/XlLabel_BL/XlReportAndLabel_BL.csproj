@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F6E0E64A-8C7F-4D2C-A2F6-661C91657DBC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XlLabel_BL</RootNamespace>
+    <AssemblyName>XlLabel_BL</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="XlReportAndLabel_BL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Data_Layer\CoinDisplaySet_DL\CoinDisplaySet_DL.csproj">
+      <Project>{fef127dc-f965-4c60-a812-cf4ff74ca35c}</Project>
+      <Name>CoinDisplaySet_DL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data_Layer\XlLabel_DL\XlReportAndLabel_DL.csproj">
+      <Project>{93132c38-fec3-415a-b1c6-f1e9b859e630}</Project>
+      <Name>XlReportAndLabel_DL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Support_Classes\CoinDisplaySet\CoinDisplaySet.csproj">
+      <Project>{8da7adf5-e6c3-4101-9df4-d604f7af28e9}</Project>
+      <Name>CoinDisplaySet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Support_Classes\Coin\Coin.csproj">
+      <Project>{9b3af967-c8af-45f4-b4f2-f2865a98db06}</Project>
+      <Name>Coin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Support_Classes\XlLabel\XlReportAndLabel.csproj">
+      <Project>{7480fe92-26c0-4426-aa80-e23f4365b267}</Project>
+      <Name>XlReportAndLabel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
